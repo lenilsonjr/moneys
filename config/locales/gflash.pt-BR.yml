@@ -1,0 +1,8 @@
+pt-BR:
+  gflash:
+    titles:
+      notice: "Informação:"
+      success: "Sucesso!"
+      warning: "Alerta!"
+      error: "Erro:"
+      progress: "Progresso..."

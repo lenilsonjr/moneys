@@ -1,0 +1,10 @@
+pt-BR:
+  roles:
+    admin: Administrador
+    school_manager: Coordenador
+    psychologist: Psicólogo
+    teacher: Professor
+    student: Aluno
+    responsible: Responsável
+    customer: Cliente
+    technician: Técnico

@@ -1,0 +1,11 @@
+pt-BR:
+  statuses:
+    scheduled: Agendado
+    confirmed: Confirmado
+    arrived: No Local
+    absent: Ausente
+    in_treatment: Em atendimento
+    not_treated: Atendimento não realizado
+    rescheduled: Reagendado
+    canceled: Cancelado
+    finished: Concluído

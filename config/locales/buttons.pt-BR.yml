@@ -1,0 +1,16 @@
+pt-BR:
+  buttons:
+    new: Novo
+    update: Atualizar
+    save: Salvar
+    create: Criar
+    show: Mostrar
+    edit: Editar
+    edit_profile: Editar perfil
+    destroy: Apagar
+    back: Voltar
+    home: Início
+    close: Fechar
+    send: Enviar
+    send_message: Enviar Mensagem
+    add_new: Adicionar Novo

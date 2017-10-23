@@ -1,0 +1,27 @@
+pt-BR:
+  labels:
+    login: Login
+    identify_yourself: Identifique-se
+    forgot_password: Esqueceu sua senha?
+    enter: Entrar
+    email: E-mail
+    phone: Telefone
+    name: Nome
+    password: Senha
+    password_confirmation: Confirmar senha
+    message: Mensagem
+    new_message: Nova Mensagem
+    send_message_to: Enviar mensagem para %{name}
+    recipient: Destinatário
+    subject: Assunto
+    comment: Comentário
+    comments: comentários
+    admin: Administrador
+    doctor: Doutor
+    attendant: Atendente
+    and: e
+    role: Tipo de usuário
+    search: Pesquisar
+    profile: Perfil
+    settings: Configurações
+    sign_out: Sair

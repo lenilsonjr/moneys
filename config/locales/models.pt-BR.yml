@@ -1,0 +1,66 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+      patient:
+        one: Paciente
+        other: Pacientes
+      insurance:
+        one: Plano de Saúde
+        other: Planos de Saúde
+      appointment:
+        one: Agendamento
+        other: Agendamentos
+      appointment_status:
+        one: Status
+        other: Status
+      appointment_book:
+        one: Agenda
+        other: Agendas
+      appointment_type:
+        one: Tipo de agendamento
+        other: Tipos de agendamento
+      school:
+        one: Escola
+        other: Escolas
+      product:
+        one: Produto
+        other: Produtos
+      product_category:
+        one: Categoria
+        other: Categorias
+      company:
+        one: Empresa
+        other: Empresas
+      ticket:
+        one: Chamado
+        other: Chamados
+    attributes:
+      user:
+        name: Nome
+        email: E-mail
+        phone: Telefone
+      insurance:
+        name: Nome
+        category: Categoria
+        registration: Registro
+      patient:
+        name: Nome
+        cpf: CPF
+        hometown: Cidade natal
+        sexo: Sexo
+        rg: RG
+        occupation: Ocupação
+        dob: Data de nascimento
+        marital_status: Estado civil
+        father: Pai
+        mother: Mãe
+        spouse: Cônjugue
+        email: E-mail
+        phone: Telefone
+        cep: CEP
+        address: Endereço
+        city: Cidade
+        state: Estado

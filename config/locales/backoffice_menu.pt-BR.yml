@@ -1,0 +1,14 @@
+pt-BR:
+  backoffice_menu:
+    dashboard: Dashboard
+    users: Usuários
+    options: Opções
+    insurances: Planos de Saúde
+    reports: Relatórios
+    appointments: Atendimentos
+    appointment_books: Agendas
+    appointment_types: Tipos de agendamento
+    patients: Pacientes
+    schools: Escolas
+    products: Produtos
+    product_categories: Categorias
