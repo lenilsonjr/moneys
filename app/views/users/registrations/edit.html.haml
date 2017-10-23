@@ -1,0 +1,20 @@
+.container
+  = simple_form_for(resource, as: resource_name, url: user_registration_path, html: { class: "form-signin", method: :put }) do |f|
+    %h2.form-signin-heading
+      %img{src: image_path('logo.png'), alt: "Moneys - Perfil", width: '220px'}
+    - if alert
+      - flash.each do |key, value|
+        %div{:class => "#{key} alert-danger text-center", :style => "margin-bottom: 0"}= value
+    .login-wrap
+      .user-login-info
+        = f.input :name, autofocus: true, placeholder: 'Nome', class: "form-control", required: true, label: false
+        = f.input :email, placeholder: 'E-mail', class: "form-control", required: true, label: false
+        = f.input :password, autocomplete: "off", placeholder: 'Senha', class: "form-control", label: false
+        = f.input :password_confirmation, autocomplete: "off", placeholder: 'Confirme sua senha', class: "form-control", label: false, hint: 'deixe em branco para não alterar'
+
+        %hr
+
+        = f.input :current_password, autocomplete: "off", placeholder: 'Senha atual', class: "form-control", hint: 'sua senha atual, para confirmar as alterações', required: true, label: false
+
+      = f.submit 'Atualizar', class: "btn btn-lg btn-login btn-block"
+      = link_to "< Voltar", root_path, class: 'btn btn-sm btn-block btn-warning', style: 'color: white;'

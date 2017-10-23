@@ -1,0 +1,29 @@
+.container
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-signin" }) do |f|
+    %h2.form-signin-heading
+      %img{src: image_path('logo.png'), alt: "Moneys - Login", width: '220px'}
+    - if alert
+      - flash.each do |key, value|
+        %div{:class => "#{key} alert-danger text-center", :style => "margin-bottom: 0"}= value
+    .login-wrap
+      .user-login-info
+        = f.text_field :email, autofocus: true, placeholder: t("labels.email"), class: "form-control"
+        = f.password_field :password, autocomplete: "off", placeholder: t("labels.password"), class: "form-control"
+      %span.pull-right{:style => "margin-bottom: 15px"}
+        %a{"data-toggle" => "modal", :href => "#myModal"}= t("labels.forgot_password")
+      = f.submit t("labels.enter"), class: "btn btn-lg btn-login btn-block"
+  / Modal
+  #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+          %h4.modal-title= t("labels.forgot_password")
+        .modal-body
+          = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+            = f.input :email, placeholder: t("labels.email")
+            %br/
+            = f.submit "Enviar instruções", class: 'btn btn-block btn-lg btn-success'
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Cancelar
+  / modal

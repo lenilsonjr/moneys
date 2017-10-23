@@ -1,0 +1,16 @@
+= paginator.render do
+  %nav.pagination
+    %li
+      = first_page_tag unless current_page.first?
+    %li
+      = prev_page_tag unless current_page.first?
+    - each_page do |page|
+      %li
+        - if page.left_outer? || page.right_outer? || page.inside_window?
+          = page_tag page
+        - elsif !page.was_truncated?
+          = gap_tag
+    %li
+      = next_page_tag unless current_page.last?
+    %li
+      = last_page_tag unless current_page.last?
