@@ -1,0 +1,24 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Ooops! - Moneys
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application'
+    = stylesheet_link_tag    'bootstrap-reset'
+    = stylesheet_link_tag    'bucket-ico-fonts'
+    = stylesheet_link_tag    'font-awesome.min'
+    = stylesheet_link_tag    'style'
+    = stylesheet_link_tag    'style-responsive'
+    = stylesheet_link_tag    'errors'
+    = action_cable_meta_tag
+  %body{:class => "body-#{code}"}
+    .error-head
+    .container
+      %section.error-wrapper.text-center
+        %h1
+          = code
+        = yield
+        %a.back-btn{:href => root_path}
+          %i.fa.fa-home
+          Voltar Para home

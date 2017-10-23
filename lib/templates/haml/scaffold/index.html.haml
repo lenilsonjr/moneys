@@ -1,0 +1,42 @@
+- content_for :header do
+  Listando <%= plural_table_name %>
+
+= render partial: 'backoffice/<%= plural_table_name %>/shared/filter'
+
+
+//Lembrar de mudar isto para uma partial
+
+#filterrific_results
+  %table.table.table-striped
+    %thead
+      %tr
+        %th #
+  <% for attribute in attributes -%>
+    %th <%= attribute.human_name %>
+  <% end -%>
+        %th
+        %th
+        %th
+
+    %tbody
+      - <%= plural_table_name %>.each do |<%= singular_table_name %>|
+        %tr
+          %td= <%= singular_table_name %>.id
+  <% for attribute in attributes -%>
+    %td= <%= singular_table_name %>.<%= attribute.name %>
+  <% end -%>
+          %td= link_to fa_icon('eye 2x', class: 'text-info', title: 'Ver'), [:backoffice, <%= singular_table_name %>]
+          %td= link_to fa_icon('edit 2x', class: 'text-warning', title: 'Editar'), edit_backoffice_<%= singular_table_name %>_path(<%= singular_table_name %>)
+          %td= link_to fa_icon('trash 2x', class: 'text-danger', title: 'Apagar'), [:backoffice, <%= singular_table_name %>], method: :delete, data: { confirm: 'Tem certeza?' }
+
+  = paginate <%= plural_table_name %>
+
+  = render partial: 'layouts/backoffice_shared/empty_message', locals: { collection: <%= plural_table_name %> }  
+
+//= render(                                    |
+    partial: 'backoffice/<%= plural_table_name %>/shared/list', |
+    locals: { <%= plural_table_name %>: @<%= plural_table_name %> }|
+  )                                          |
+
+%br
+= link_to 'Novo <%= human_name %>', new_backoffice_<%= singular_table_name %>_path, class: 'btn btn-primary'

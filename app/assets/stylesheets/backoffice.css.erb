@@ -1,0 +1,27 @@
+/*
+*= require gritter
+*= require pickadate/classic
+*= require pickadate/classic.date
+*= require pickadate/classic.time
+*= require custom
+*/
+
+/* fix Pickadate */
+.picker__select--month, .picker__select--year { padding: 0 }
+.picker__table thead th { text-align: center; }
+.picker__holder { overflow: hidden }
+.picker__frame { overflow: hidden }
+dd, dt { padding: 4px }
+/* end fix Pickadate */
+
+.gritter-css3 .gritter-close {
+  background: url(<%= asset_path 'gritter-close.png' %>)!important;
+}
+
+/* Fix button order (Bootbox) */
+.modal-footer button { float:right; margin-left: 10px; }
+/* end Fix button order (Bootbox) */
+
+.panel-heading {
+  border-bottom: 0;
+}

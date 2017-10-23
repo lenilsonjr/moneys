@@ -1,0 +1,30 @@
+.form-signin h2.form-signin-heading {
+  background: rgba(0,72,45,0.8) !important;;
+  border-bottom: 10px solid rgba(108,194,143,1) !important;
+}
+
+.login-body {
+  background: #27ae60!important;
+}
+
+.yellow-bg {
+  background: #ffef47 !important;
+  color: black!important;
+}
+
+.event-calendar {
+  background: #ffef47 !important;
+}
+
+.event-list li, .cal-day, .event-close {
+  color: black!important;
+}
+
+.today .day-contents, .calendar-block .day-contents:hover {
+  background: #ffef47 !important;
+  color: black!important;
+}
+
+.event-list li {
+  background: rgba(255,255,255,.9)!important;
+}

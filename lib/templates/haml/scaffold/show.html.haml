@@ -1,0 +1,15 @@
+- content_for :header do
+  Visualizando <%= singular_table_name %>
+
+%dl.dl-horizontal
+<% for attribute in attributes -%>
+  %dt <%= attribute.human_name %>:
+  %dd= @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+
+%hr
+= link_to fa_icon('arrow-left', class: 'text-default', text: 'Voltar'), backoffice_<%= index_helper %>_path
+|
+= link_to fa_icon('edit', class: 'text-warning', text: 'Editar'), edit_backoffice_<%= singular_table_name %>_path(@<%= singular_table_name %>)
+|
+= link_to fa_icon('trash', class: 'text-danger', text: 'Apagar'), [:backoffice, @<%= singular_table_name %>], method: :delete, data: { confirm: 'Tem certeza?' }

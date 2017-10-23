@@ -1,0 +1,12 @@
+= simple_form_for [:backoffice, @<%= singular_table_name %>] do |f|
+  - if @<%= singular_table_name %>.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@<%= singular_table_name %>.errors.count, "erro")} não deixaram este <%= singular_table_name %> ser salvo:"
+      %ul
+        - @<%= singular_table_name %>.errors.full_messages.each do |message|
+          %li= message
+<% for attribute in attributes -%>
+  = f.input :<%= attribute.name %>, label: "<%= attribute.name %>"
+<% end -%>
+  .actions
+    = f.submit class: 'btn btn-success'

@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Relatório - Moneys
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'print', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .container-fluid
+      .row
+        .col-md-8.col-md-offset-2.text{:style => "padding-top: 20px;"}
+          .row.text-center
+            %img.center-block{:alt => "Singlus Ocupacional", :src => asset_path('logo.png'), :width => "150px"}/
+            %a.btn.btn-lg.btn-success.hidden-print{:href => "#", :onclick => "window.print();"}
+              %i.fa.fa-print
+              IMPRIMIR
+            %br/
+            %br/
+          = yield

@@ -1,0 +1,61 @@
+.navbar-header
+  %button.navbar-toggle.hr-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+    %span.fa.fa-bars
+  / logo start
+  / logo start
+  .brand
+    %a.logo{:href => root_path, :style => 'margin: 20px 0 0 46px;'}
+      %img{:alt => "Moneys", :src => asset_path('logo.png'), :style => 'width: 140px;'}/
+  / logo end
+  / logo end
+  .horizontal-menu.navbar-collapse.collapse
+    %ul.nav.navbar-nav
+      %li
+        = link_to root_path do
+          %i.fa.fa-dashboard
+          %span Painel
+      %li.dropdown
+        %a.dropdown-toggle{"data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+          UI Kits
+          %b.fa.fa-angle-down
+        %ul.dropdown-menu
+          %li
+            %a{:href => "general.html"} General
+          %li
+            %a{:href => "buttons.html"} Buttons
+          %li
+            %a{:href => "typography.html"} Typography
+          %li
+            %a{:href => "font_awesome.html"} Font Awesome
+  .top-nav.hr-top-nav
+    %ul.nav.pull-right.top-menu
+      %li
+        %input.form-control.search{:placeholder => " Search", :type => "text"}/
+      / user login dropdown start
+      %li.dropdown
+        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+          %img{:alt => "", :src => "images/avatar1_small.jpg"}/
+          %span.username John Doe
+          %b.caret
+        %ul.dropdown-menu.extended.logout
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-suitcase>
+              Profile
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-cog
+              Settings
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-bell-o
+              Notification
+          %li
+            %a{:href => "login.html"}
+              %i.fa.fa-key
+              Log Out
+      / user login dropdown end
+/ header end
+/ sidebar start
+/ sidebar end
+/ main content start

@@ -1,0 +1,8 @@
+- content_for :header do
+  Novo <%= singular_table_name %>
+
+= render 'backoffice/<%= plural_table_name %>/shared/form'
+
+%hr
+
+= link_to fa_icon('arrow-left', class: 'text-default', text: 'Voltar'), backoffice_<%= index_helper %>_path

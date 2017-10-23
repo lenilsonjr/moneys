@@ -1,0 +1,29 @@
+.wallpaper-jumbotron {
+  color: #FFFFFF;
+  background-image: image-url("maintenance.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+canvas {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+
+.green-bg {
+  background-color: #8ebf4e;
+}
+
+.colored-box {
+  float: left;
+  width: 20px;
+  height: 20px;
+  //margin: 1px;
+  border: 1px solid rgba(0, 0, 0, .2);  
+}

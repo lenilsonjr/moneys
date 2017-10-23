@@ -1,0 +1,12 @@
+body {
+  font-size: 10px;
+}
+
+@media (min-width: 768px){
+  .dl-horizontal dt{
+    text-align: left!important;
+  }
+  .dl-horizontal dd {
+    margin-left: 0!important;
+  }
+}

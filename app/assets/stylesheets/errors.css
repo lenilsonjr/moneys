@@ -1,0 +1,53 @@
+.error-wrapper h1 {
+  font-weight: bold!important;
+  font-size: 160px!important;
+}
+
+.error-desk {
+  background: rgba(0,0,0,0)!important;
+}
+
+.body-500 {
+  background: #c0392b!important;
+  color: #fff;
+}
+
+.body-500 h1 {
+  color: #c0392b!important;
+}
+
+.body-503 {
+  background: #e74c3c!important;
+  color: #fff;
+}
+
+.body-503 h1 {
+  color: #e74c3c!important;
+}
+
+.body-422 {
+  background: #f39c12!important;
+  color: #fff;
+}
+
+.body-422 h1 {
+  color: #f39c12!important;
+}
+
+.body-404 {
+  background: #35bcb5!important;
+  color: #fff;
+}
+
+.body-404 h1 {
+  color: #35bcb5!important;
+}
+
+.body-403 {
+  background: #d35400!important;
+  color: #fff;
+}
+
+.body-403 h1 {
+  color: #d35400!important;
+}
