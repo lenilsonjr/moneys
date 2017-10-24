@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  color: MyString
+  type: 
+  parent_id: 1
+  book: one
+
+two:
+  name: MyString
+  color: MyString
+  type: 
+  parent_id: 1
+  book: two
