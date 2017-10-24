@@ -107,6 +107,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    colorize (0.8.1)
     concurrent-ruby (1.0.5)
     cpf_faker (1.3.0)
       clipboard
@@ -333,6 +334,7 @@ DEPENDENCIES
   client_side_validations-simple_form
   cocoon
   coffee-rails (~> 4.2)
+  colorize
   cpf_faker
   devise
   faker!

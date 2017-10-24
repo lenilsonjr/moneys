@@ -69,6 +69,8 @@ gem "cocoon"
 gem 'city-state', github: 'loureirorg/city-state'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.2'
+#Colorized terminal outputs
+gem "colorize"
 
 source 'https://rails-assets.org' do
   # Animated css
