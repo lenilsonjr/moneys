@@ -28,3 +28,9 @@
 .event-list li {
   background: rgba(255,255,255,.9)!important;
 }
+
+.wdgt-value h1 {
+  color: rgb(73, 73, 73)!important;
+  font-weight: 300!important;
+  text-transform: uppercase!important;
+}

@@ -1,0 +1,19 @@
+.row
+  - books.each do |book|
+    .col-md-3
+      .profile-nav.alt
+        %section.panel.text-center
+          .user-heading.alt.wdgt-row.terques-bg
+            %i.fa.fa-user
+          .panel-body
+            .wdgt-value
+              %h1= book.name
+
+  .col-md-3
+    = link_to new_backoffice_book_path, remote: true do
+      .profile-nav.alt
+        %section.panel.text-center
+          .user-heading.alt.wdgt-row.green-bg{style: ' border-radius: 4px 4px 4px 4px!important; -webkit-border-radius: 4px 4px 4px 4px!important;'}
+            %i.fa.fa-plus
+            .wdgt-value
+              %h1{:style => 'color: white!important; font-weight: bold!important;'} Criar Novo
