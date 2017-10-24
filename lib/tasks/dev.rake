@@ -39,7 +39,8 @@ namespace :dev do
         email: "admin@demo.com",
         name: Faker::Name.name,
         password: "123456",
-        password_confirmation: "123456"
+        password_confirmation: "123456",
+        main_currency: :brl
       )
 
       User.last.add_role(:admin)
@@ -48,7 +49,8 @@ namespace :dev do
         email: "user@demo.com",
         name: Faker::Name.name,
         password: "123456",
-        password_confirmation: "123456"
+        password_confirmation: "123456",
+        main_currency: :brl        
       )
 
       User.last.add_role(:owner)      
