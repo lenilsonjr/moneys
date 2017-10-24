@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :backoffice, path: 'app' do
+    get 'settings', to: 'settings#index'
+  end
+
   devise_for :users
   root to: 'backoffice/dashboard#index'
 

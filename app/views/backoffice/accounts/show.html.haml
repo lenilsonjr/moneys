@@ -1,0 +1,21 @@
+- content_for :header do
+  Visualizando account
+
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @account.name
+  %dt Description:
+  %dd= @account.description
+  %dt Kind:
+  %dd= @account.kind
+  %dt Logo:
+  %dd= @account.logo
+  %dt Currency:
+  %dd= @account.currency
+
+%hr
+= link_to fa_icon('arrow-left', class: 'text-default', text: 'Voltar'), backoffice_accounts_path
+|
+= link_to fa_icon('edit', class: 'text-warning', text: 'Editar'), edit_backoffice_account_path(@account)
+|
+= link_to fa_icon('trash', class: 'text-danger', text: 'Apagar'), [:backoffice, @account], method: :delete, data: { confirm: 'Tem certeza?' }

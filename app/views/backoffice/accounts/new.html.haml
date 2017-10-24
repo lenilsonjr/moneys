@@ -1,0 +1,8 @@
+- content_for :header do
+  Novo account
+
+= render 'backoffice/accounts/shared/form'
+
+%hr
+
+= link_to fa_icon('arrow-left', class: 'text-default', text: 'Voltar'), backoffice_accounts_path

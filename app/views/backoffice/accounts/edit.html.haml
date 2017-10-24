@@ -1,0 +1,12 @@
+- content_for :header do
+  Editando account
+
+= render 'backoffice/accounts/shared/form'
+
+%hr
+
+= link_to fa_icon('arrow-left', class: 'text-default', text: 'Voltar'), backoffice_accounts_path
+|
+= link_to fa_icon('eye', class: 'text-info', text: 'Visualizar'), [:backoffice, @account]
+|
+= link_to fa_icon('trash', class: 'text-danger', text: 'Apagar'), [:backoffice, @account], method: :delete, data: { confirm: 'Tem certeza?' }

@@ -30,30 +30,31 @@
   .top-nav.hr-top-nav
     %ul.nav.pull-right.top-menu
       %li
-        %input.form-control.search{:placeholder => " Search", :type => "text"}/
+        %input.form-control.search{:placeholder => " Pesquisar", :type => "text"}/
       / user login dropdown start
       %li.dropdown
         %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-          %img{:alt => "", :src => "images/avatar1_small.jpg"}/
-          %span.username John Doe
+          %img{:alt => "", :src => current_user.avatar}/
+          %span.username
+            = current_user.name
+            %small= @current_book.name
           %b.caret
         %ul.dropdown-menu.extended.logout
+          - current_user.books.each do |book|
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-book
+                = book.name
           %li
-            %a{:href => "#"}
-              %i.fa.fa-suitcase>
-              Profile
+            .divider
           %li
-            %a{:href => "#"}
-              %i.fa.fa-cog
-              Settings
+            %a{:href => backoffice_settings_path}
+              %i.fa.fa-user
+              Perfil
           %li
-            %a{:href => "#"}
-              %i.fa.fa-bell-o
-              Notification
-          %li
-            %a{:href => "login.html"}
+            = link_to destroy_user_session_path, method: :delete do
               %i.fa.fa-key
-              Log Out
+              Sair
       / user login dropdown end
 / header end
 / sidebar start

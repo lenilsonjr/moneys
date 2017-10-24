@@ -1,0 +1,255 @@
+.row
+  .col-md-12
+    %section.panel
+      .panel-body.profile-information
+        .col-md-3
+          .profile-pic.text-center
+            %img{:alt => "", :src => current_user.avatar(256)}/
+        .col-md-6
+          .profile-desk
+            %h1= current_user.name
+            %span.text-muted Usuário Premium
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor vestibulum imperdiet. Ut auctor accumsan erat, a vulputate metus tristique non. Aliquam aliquam vel orci quis sagittis.
+            %a.btn.btn-primary{:href => root_path} Ir Para Painel
+        .col-md-3
+          .profile-statistics
+            %h1 $5,61,240
+            %p Saldo
+            %h1 1240
+            %p Saúde Financeira
+  .col-md-12
+    %section.panel
+      %header.panel-heading.tab-bg-dark-navy-blue
+        %ul.nav.nav-tabs.nav-justified
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#overview"}
+              Overview
+          %li
+            %a{"data-toggle" => "tab", :href => "#job-history"}
+              Configurações
+          %li
+            %a.contact-map{"data-toggle" => "tab", :href => "#contacts"}
+              Contacts
+          %li
+            %a{"data-toggle" => "tab", :href => "#settings"}
+              Settings
+      .panel-body
+        .tab-content.tasi-tab
+          #overview.tab-pane.active
+            .row
+              .col-md-8
+                .recent-act
+                  %h1 Recent Activity
+                  .activity-icon.terques
+                    %i.fa.fa-check
+                  .activity-desk
+                    %h2 1 Hour Ago
+                    %p Purchased new stationary items for head office
+                  .activity-icon.red
+                    %i.fa.fa-beer
+                  .activity-desk
+                    %h2.red 2 Hour Ago
+                    %p
+                      Completed Coffee meeting with
+                      %a.terques{:href => "#"} Stive Martin
+                      regarding the Product Promotion
+                  .activity-icon.purple
+                    %i.fa.fa-tags
+                  .activity-desk
+                    %h2.purple today evening
+                    %p 3 photo Uploaded on facebook product page
+                    .photo-gl
+                      %a{:href => "#"}
+                        %img{:alt => "", :src => "images/sm-img-1.jpg"}/
+                      %a{:href => "#"}
+                        %img{:alt => "", :src => "images/sm-img-2.jpg"}/
+                      %a{:href => "#"}
+                        %img{:alt => "", :src => "images/sm-img-3.jpg"}/
+                  .activity-icon.green
+                    %i.fa.fa-map-marker
+                  .activity-desk
+                    %h2.green yesterday
+                    %p
+                      Outdoor visit at
+                      %a.blue{:href => "#"} California State Route
+                      85 with
+                      %a.terques{:href => "#"} John Boltana
+                      %a.terques{:href => "#"} Harry Piterson
+                      regarding to setup a new show room.
+                    .loc-map
+                      location map goes here
+                  .activity-icon.yellow
+                    %i.fa.fa-user-md
+                  .activity-desk
+                    %h2.yellow 12 december 2013
+                    %p Montly Regular Medical check up at Greenland Hospital.
+              .col-md-4
+                .prf-box
+                  %h3.prf-border-head work in progress
+                  .wk-progress
+                    .col-md-5 Themeforest
+                    .col-md-5
+                      .progress
+                        .progress-bar.progress-bar-danger{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 70%"}
+                          %span.sr-only 70% Complete (success)
+                    .col-md-2 70%
+                  .wk-progress
+                    .col-md-5 Graphics River
+                    .col-md-5
+                      .progress
+                        .progress-bar.progress-bar-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 57%"}
+                          %span.sr-only 57% Complete (success)
+                    .col-md-2 57%
+                  .wk-progress
+                    .col-md-5 Code Canyon
+                    .col-md-5
+                      .progress
+                        .progress-bar.progress-bar-info{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 20%"}
+                          %span.sr-only 20% Complete (success)
+                    .col-md-2 20%
+                  .wk-progress
+                    .col-md-5 Audio Jungle
+                    .col-md-5
+                      .progress
+                        .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 30%"}
+                          %span.sr-only 30% Complete (success)
+                    .col-md-2 30%
+                .prf-box
+                  %h3.prf-border-head performance status
+                  .wk-progress.pf-status
+                    .col-md-8.col-xs-8 Total Product Sales
+                    .col-md-4.col-xs-4
+                      %strong 23545
+                  .wk-progress.pf-status
+                    .col-md-8.col-xs-8 Total Product Refer
+                    .col-md-4.col-xs-4
+                      %strong 235
+                  .wk-progress.pf-status
+                    .col-md-8.col-xs-8 Total Earn
+                    .col-md-4.col-xs-4
+                      %strong 235452344$
+                .prf-box
+                  %h3.prf-border-head team members
+                  .wk-progress.tm-membr
+                    .col-md-2.col-xs-2
+                      .tm-avatar
+                        %img{:alt => "", :src => "images/lock_thumb.jpg"}/
+                    .col-md-7.col-xs-7
+                      %span.tm John Boltana
+                    .col-md-3.col-xs-3
+                      %a.btn.btn-white{:href => "#"} Assign
+                  .wk-progress.tm-membr
+                    .col-md-2.col-xs-2
+                      .tm-avatar
+                        %img{:alt => "", :src => "images/avatar-mini-2.jpg"}/
+                    .col-md-7.col-xs-7
+                      %span.tm John Boltana
+                    .col-md-3.col-xs-3
+                      %a.btn.btn-white{:href => "#"} Assign
+                  .wk-progress.tm-membr
+                    .col-md-2.col-xs-2
+                      .tm-avatar
+                        %img{:alt => "", :src => "images/avatar-mini-3.jpg"}/
+                    .col-md-7.col-xs-7
+                      %span.tm John Boltana
+                    .col-md-3.col-xs-3
+                      %a.btn.btn-white{:href => "#"} Assign
+                  .wk-progress.tm-membr
+                    .col-md-2.col-xs-2
+                      .tm-avatar
+                        %img{:alt => "", :src => "images/avatar-mini-4.jpg"}/
+                    .col-md-7.col-xs-7
+                      %span.tm John Boltana
+                    .col-md-3.col-xs-3
+                      %a.btn.btn-white{:href => "#"} Assign
+          #job-history.tab-pane
+            .row
+              .col-md-12
+                .timeline-messages
+                  %h3 Take a Tour
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          13 January 2013
+                        .second.bg-terques
+                          Join as Product Asst. Manager
+                  / /comment
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          10 February 2012
+                        .second.bg-red
+                          Completed Provition period and Appointed as a permanent Employee
+                  / /comment
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          2 January 2011
+                        .second.bg-purple
+                          Selected Employee of the Month
+                  / /comment
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          4 March 2010
+                        .second.bg-green
+                          Got Promotion and become area manager of California
+                  / /comment
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          3 April 2009
+                        .second.bg-yellow
+                          Selected the Best Employee of the Year 2013 and was awarded
+                  / /comment
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          23 May 2008
+                        .second.bg-terques
+                          Got Promotion and become Product Manager and was transper from Branch to Head Office. Lorem ipsum dolor sit amet
+                  / /comment
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          14 June 2007
+                        .second.bg-blue
+                          Height Sales scored and break all of the previous sales record ever in the company. Awarded
+                  / /comment
+                  / Comment
+                  .msg-time-chat
+                    .message-body.msg-in
+                      %span.arrow
+                      .text
+                        .first
+                          1 January 2006
+                        .second.bg-green
+                          Take 15 days leave for his wedding and Honeymoon  Christmas
+                  / /comment
+          #contacts.tab-pane
+          #settings.tab-pane
+            .position-center
+              .prf-contacts.sttng
+                %h2 Personal Information

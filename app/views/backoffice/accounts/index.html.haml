@@ -1,0 +1,46 @@
+- content_for :header do
+  Listando accounts
+
+= render partial: 'backoffice/accounts/shared/filter'
+
+
+//Lembrar de mudar isto para uma partial
+
+#filterrific_results
+  %table.table.table-striped
+    %thead
+      %tr
+        %th #
+      %th Name
+      %th Description
+      %th Kind
+      %th Logo
+      %th Currency
+          %th
+        %th
+        %th
+
+    %tbody
+      - accounts.each do |account|
+        %tr
+          %td= account.id
+      %td= account.name
+      %td= account.description
+      %td= account.kind
+      %td= account.logo
+      %td= account.currency
+            %td= link_to fa_icon('eye 2x', class: 'text-info', title: 'Ver'), [:backoffice, account]
+          %td= link_to fa_icon('edit 2x', class: 'text-warning', title: 'Editar'), edit_backoffice_account_path(account)
+          %td= link_to fa_icon('trash 2x', class: 'text-danger', title: 'Apagar'), [:backoffice, account], method: :delete, data: { confirm: 'Tem certeza?' }
+
+  = paginate accounts
+
+  = render partial: 'layouts/backoffice_shared/empty_message', locals: { collection: accounts }  
+
+//= render(                                    |
+    partial: 'backoffice/accounts/shared/list', |
+    locals: { accounts: @accounts }|
+  )                                          |
+
+%br
+= link_to 'Novo Account', new_backoffice_account_path, class: 'btn btn-primary'
