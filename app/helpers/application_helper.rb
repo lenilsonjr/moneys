@@ -38,6 +38,11 @@ module ApplicationHelper
 
   def all_currencies(hash)
     hash.keys.map(&:upcase)
-  end    
+  end
+
+  def is_active?(to_test, current)
+    return 'active' if to_test == current
+    ''
+  end
 
 end

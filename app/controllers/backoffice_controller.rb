@@ -6,7 +6,7 @@ class BackofficeController < ApplicationController
 
   private
     def set_book
-      if current_user && (session[:current_book_id].nil? || session[:current_book_id].empty?)
+      if current_user && (session[:current_book_id].nil? || !session[:current_book_id].integer?)
         @current_book = current_user.books.first
       elsif current_user && session[:current_book_id].present?
 

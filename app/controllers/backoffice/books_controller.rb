@@ -41,6 +41,15 @@ class Backoffice::BooksController < BackofficeController
     render :destroy
   end
 
+  # PUT /books/1/alternate
+  def alternate
+    @book = current_user.books.find(params[:book_id])    
+
+    session[:current_book_id] = @book.id
+    @current_book = @book
+    render :alternate, status: :ok
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book

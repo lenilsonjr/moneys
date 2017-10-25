@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   namespace :backoffice, path: 'app' do
     get 'settings', to: 'settings#index'
 
-    resources :books, except: [ :show, :index ]
+    resources :books, except: [ :show, :index ] do
+      put 'alternate'      
+    end
 
   end
 
