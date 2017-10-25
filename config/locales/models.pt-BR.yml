@@ -37,6 +37,15 @@ pt-BR:
       ticket:
         one: Chamado
         other: Chamados
+      book:
+        one: Livro
+        other: Books
+      account:
+        one: Conta
+        other: Contas
+      category:
+        one: Categoria
+        other: Categorias
     attributes:
       user:
         name: Nome

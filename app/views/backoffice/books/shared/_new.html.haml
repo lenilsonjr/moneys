@@ -1,0 +1,11 @@
+.modal.fade{:role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Fechar", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        %h4.modal-title Novo Livro
+      .modal-body
+        = render 'backoffice/books/shared/form'
+      .modal-footer
+        = link_to fa_icon('arrow-left', class: 'text-default', text: 'Voltar'), '#', data: { dismiss: 'modal' }

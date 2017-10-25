@@ -34,7 +34,7 @@
       .panel-body
         .tab-content.tasi-tab
           #books.tab-pane.active
-            = render 'backoffice/settings/shared/books', books: current_user.books
+            = render 'backoffice/books/shared/books', books: @books
           #settings.tab-pane
             = render 'backoffice/settings/shared/settings'
           #membership.tab-pane

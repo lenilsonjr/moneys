@@ -1,14 +1,7 @@
 .row
-  - books.each do |book|
-    .col-md-3
-      .profile-nav.alt
-        %section.panel.text-center
-          .user-heading.alt.wdgt-row.terques-bg
-            %i.fa.fa-user
-          .panel-body
-            .wdgt-value
-              %h1= book.name
-
+  .books-list
+    - books.each do |book|
+      = render 'backoffice/books/shared/book', book: book
   .col-md-3
     = link_to new_backoffice_book_path, remote: true do
       .profile-nav.alt

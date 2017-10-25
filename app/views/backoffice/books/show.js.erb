@@ -1,0 +1,10 @@
+<% if @book.errors.any? %>
+$(".notices").prepend('<%= escape_javascript( flash_messages ) %>');
+<% else %>
+if ( $("#book_<%= @book.id %>").length > 0 ){
+  $('#book_<%= @book.id %>').replaceWith("<%= escape_javascript( render(partial: 'backoffice/books/shared/book', locals: { book: @book }) ) %>");
+} else {
+  $('.books-list').append("<%= escape_javascript( render(partial: 'backoffice/books/shared/book', locals: { book: @book }) ) %>");  
+}
+$('.modal').modal('hide');
+<% end %>

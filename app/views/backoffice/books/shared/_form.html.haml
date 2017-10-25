@@ -1,0 +1,11 @@
+= simple_form_for [:backoffice, @book], remote: true do |f|
+  .notices
+  .row
+    .col-md-4
+      = f.input :name, label: "Nome"
+    .col-md-4
+      = f.input :kind, label: "Tipo", collection: Book.available_kinds
+    .col-md-4
+      = f.input :main_currency, label: "Moeda", collection: all_currencies(Money::Currency.table)
+  .actions
+    = f.submit class: 'btn btn-success'
