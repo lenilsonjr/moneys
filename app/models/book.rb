@@ -5,7 +5,15 @@ class Book < ApplicationRecord
   validates_presence_of :main_currency
   
   def self.available_kinds
-    %w[ Conta\ Pessoal Microempreendedor Pequena\ Empresa Condomínio Finanças\ Da\ Casa Finanças\ Do\ Casal Outro ]
+    [
+      ["Conta Pessoal", :personal],
+      ["Microempreendedor", :freelancer],
+      ["Pequena Empresa", :small_business],
+      ["Condomínio", :condominium],
+      ["Finanças da Casa", :house_finances],
+      ["Finanças do Casal", :couple_finances],
+      ["Outro", :other]
+    ]
   end
 
 end

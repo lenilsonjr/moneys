@@ -40,7 +40,7 @@ namespace :dev do
         name: Faker::Name.name,
         password: "123456",
         password_confirmation: "123456",
-        main_currency: :brl
+        main_currency: 'BRL'
       )
 
       User.last.add_role(:admin)
@@ -50,7 +50,7 @@ namespace :dev do
         name: Faker::Name.name,
         password: "123456",
         password_confirmation: "123456",
-        main_currency: :brl        
+        main_currency: 'BRL'        
       )
 
       User.last.add_role(:owner)      
