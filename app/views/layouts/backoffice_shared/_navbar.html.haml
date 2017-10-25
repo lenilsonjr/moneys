@@ -37,16 +37,18 @@
           %img{:alt => "", :src => current_user.avatar}/
           %span.username
             = current_user.name
-            %small= @current_book.name
+            - if current_user.books.count > 1
+              %small= @current_book.name
           %b.caret
         %ul.dropdown-menu.extended.logout
-          - current_user.books.each do |book|
-            %li{class: is_active?(book, @current_book)}[book, 'alternate']
-              = link_to backoffice_book_alternate_path(book), method: :put do
-                %i.fa.fa-book
-                = book.name
-          %li
-            .divider
+          - if current_user.books.count > 1
+            - current_user.books.each do |book|
+              %li{class: is_active?(book, @current_book)}[book, 'alternate']
+                = link_to backoffice_book_alternate_path(book), method: :put do
+                  %i.fa.fa-book
+                  = book.name
+            %li
+              .divider
           %li
             %a{:href => backoffice_settings_path}
               %i.fa.fa-user
