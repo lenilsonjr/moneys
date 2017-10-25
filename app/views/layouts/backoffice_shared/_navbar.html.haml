@@ -42,7 +42,7 @@
         %ul.dropdown-menu.extended.logout
           - current_user.books.each do |book|
             %li{class: is_active?(book, @current_book)}[book, 'alternate']
-              = link_to backoffice_book_alternate_path(book), remote: true, method: :put do
+              = link_to backoffice_book_alternate_path(book), method: :put do
                 %i.fa.fa-book
                 = book.name
           %li

@@ -47,7 +47,9 @@ class Backoffice::BooksController < BackofficeController
 
     session[:current_book_id] = @book.id
     @current_book = @book
-    render :alternate, status: :ok
+
+    redirect_back(fallback_location: root_path)
+    #render :alternate, status: :ok
   end
 
   private
