@@ -4,12 +4,19 @@
     %h2.text-center Editar Perfil
 
     = simple_form_for(current_user, url: user_registration_path, html: { method: :put }) do |f|
-      = f.input :name, autofocus: true, placeholder: 'Nome', class: "form-control", required: true, label: false
-      = f.input :email, placeholder: 'E-mail', class: "form-control", required: true, label: false
-      = f.input :birthdate, placeholder: 'Data de nascimento', class: "form-control", required: false, label: false, hint: 'Usamos sua data de nascimento apenas para personalizar sua experiência, dicas de investimento, etc', start_year: 1940
-      = f.input :main_currency, placeholder: 'Moeda Principal', class: "form-control", required: true, label: false, collection: all_currencies(Money::Currency.table), hint: 'coloque aqui a moeda que você mais usa no dia a dia'
-      = f.input :password, autocomplete: "off", placeholder: 'Senha', class: "form-control", label: false
-      = f.input :password_confirmation, autocomplete: "off", placeholder: 'Confirme sua senha', class: "form-control", label: false, hint: 'deixe em branco para não alterar'
+      .row
+        .col-md-6
+          = f.input :name, autofocus: true, placeholder: 'Nome', class: "form-control", required: true, label: false
+        .col-md-6
+          = f.input :email, placeholder: 'E-mail', class: "form-control", required: true, label: false
+        .col-md-6
+          = f.input :birthdate, placeholder: 'Data de nascimento', class: "form-control", required: false, label: false, hint: 'usamos sua data de nascimento para personalizar sua experiência', start_year: 1940
+        .col-md-6
+          = f.input :main_currency, placeholder: 'Moeda Principal', class: "form-control", required: true, label: false, collection: all_currencies(Money::Currency.table), hint: 'coloque aqui a moeda que você mais usa no dia a dia'
+        .col-md-6
+          = f.input :password, autocomplete: "off", placeholder: 'Senha', class: "form-control", label: false
+        .col-md-6
+          = f.input :password_confirmation, autocomplete: "off", placeholder: 'Confirme sua senha', class: "form-control", label: false, hint: 'deixe em branco para não alterar'
 
       %hr
 
