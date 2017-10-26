@@ -37,8 +37,11 @@ class Backoffice::BooksController < BackofficeController
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
-    @book.destroy
-    render :destroy
+    if current_user.books.count > 1
+      @book.destroy
+    else
+      render :destroy
+    end
   end
 
   # PUT /books/1/alternate

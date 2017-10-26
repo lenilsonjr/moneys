@@ -1,2 +1,6 @@
+<% if @book.destroyed? %>
 $('#book_<%= @book.id %>').remove();
+<% else %>
+<%= add_gritter("Você não pode excluir seu único livro!", :title => "Erro!", :image => '/assets/error.png') %>
+<% end %>
 $('.modal').modal('hide');
