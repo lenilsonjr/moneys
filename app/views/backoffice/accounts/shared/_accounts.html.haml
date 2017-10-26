@@ -1,0 +1,12 @@
+.row
+  .accounts-list
+    - accounts.each do |account|
+      = render 'backoffice/accounts/shared/accounts', account: account
+  .col-md-3
+    = link_to new_backoffice_account_path, remote: true do
+      .profile-nav.alt
+        %section.panel.text-center
+          .user-heading.alt.wdgt-row.green-bg{style: ' border-radius: 4px 4px 4px 4px!important; -webkit-border-radius: 4px 4px 4px 4px!important;'}
+            %i.fa.fa-plus
+            .wdgt-value
+              %h1{:style => 'color: white!important; font-weight: bold!important;'} Criar Novo

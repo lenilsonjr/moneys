@@ -1,0 +1,10 @@
+<% if @account.errors.any? %>
+$(".notices").prepend('<%= escape_javascript( flash_messages ) %>');
+<% else %>
+if ( $("#account_<%= @account.id %>").length > 0 ){
+  $('#account_<%= @account.id %>').replaceWith("<%= escape_javascript( render(partial: 'backoffice/accounts/shared/account', locals: { account: @account }) ) %>");
+} else {
+  $('.accounts-list').append("<%= escape_javascript( render(partial: 'backoffice/accounts/shared/account', locals: { account: @account }) ) %>");  
+}
+$('.modal').modal('hide');
+<% end %>

@@ -1,0 +1,9 @@
+= link_to edit_backoffice_account_path(account), remote: true do
+  .col-md-3[account]
+    .profile-nav.alt
+      %section.panel.text-center
+        .user-heading.alt.wdgt-row.terques-bg
+          %i.fa.fa-user
+        .panel-body
+          .wdgt-value
+            %h1= account.name

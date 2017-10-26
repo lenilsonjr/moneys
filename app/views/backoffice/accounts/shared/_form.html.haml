@@ -1,14 +1,15 @@
-= simple_form_for [:backoffice, @account] do |f|
-  - if @account.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@account.errors.count, "erro")} não deixaram este account ser salvo:"
-      %ul
-        - @account.errors.full_messages.each do |message|
-          %li= message
-  = f.input :name, label: "name"
-  = f.input :description, label: "description"
-  = f.input :kind, label: "kind"
-  = f.input :logo, label: "logo"
-  = f.input :currency, label: "currency"
+= simple_form_for [:backoffice, @account], remote: true do |f|
+  .noticess
+  .row
+    .col-md-4
+      = f.input :name, label: "Nome"
+    .col-md-4
+      = f.input :kind, label: "Tipo", collection: Account.available_kinds
+    .col-md-2
+      = f.input :logo, label: "Logo"
+    .col-md-2
+      = f.input :currency, label: "Moeda", collection: all_currencies(Money::Currency.table)
+    .col-md-12
+      = f.input :description, label: "Descrição"
   .actions
     = f.submit class: 'btn btn-success'

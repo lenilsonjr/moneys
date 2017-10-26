@@ -1,0 +1,6 @@
+<% if @account.destroyed? %>
+$('#account_<%= @account.id %>').remove();
+<% else %>
+<%= add_gritter("Você não pode excluir sua única conta!", :title => "Erro!", :image => '/assets/error.png') %>
+<% end %>
+$('.modal').modal('hide');
