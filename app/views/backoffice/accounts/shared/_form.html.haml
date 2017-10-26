@@ -20,7 +20,7 @@
                 - bank_icons.each do |icon|
                   %li.pick-icon.col-xs-3.text-center
                     %label
-                      = f.radio_button :logo, icon, {style: 'display: none;', class: 'radio-icon', :checked => ( f.object.new_record? && icon == 'carteira.jpg' )}
+                      = f.radio_button :logo, icon, {style: 'display: none;', class: 'radio-icon', :checked => ( (f.object.new_record? && icon == 'carteira.jpg') || icon == f.object.logo )}
                       %img{:src => "/assets/accounts/#{icon}", :style => 'width: 40px;'}
     .col-md-12
       = f.input :description, placeholder: "Descrição"
