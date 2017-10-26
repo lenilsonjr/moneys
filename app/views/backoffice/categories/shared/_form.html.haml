@@ -1,0 +1,16 @@
+= simple_form_for [:backoffice, @category], defaults: { label: false, input_html: { class: 'input-lg'} }, remote: true do |f|
+  .noticess
+  .row
+    .col-md-12
+      .input-group.input-group-lg
+        .input-group-addon.input-addon-colors
+          = f.input_field :color, placeholder: "Cor", class: 'colorpicker', collection: Category.available_colors, include_blank: false
+        = f.input_field :name, placeholder: "Nome", class: 'form-control'
+  %br
+  .row
+    .col-md-6
+      = f.input :kind, placeholder: "Tipo", collection: select_kind
+    .col-md-6
+      = f.input :parent_id, placeholder: "Pai", collection: select_parent
+  .actions
+    = f.submit class: 'btn btn-success'

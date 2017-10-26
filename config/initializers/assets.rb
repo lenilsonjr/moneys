@@ -31,6 +31,7 @@ Rails.application.config.assets.precompile += %w(
   underscore-min.js
   backoffice.js
   sounds.js
+  jquery.simplecolorpicker.js
 )
 
 
@@ -48,6 +49,7 @@ Rails.application.config.assets.precompile += %w(
   turquoise-theme.css
   backoffice.css
   print.css
+  jquery.simplecolorpicker.css
 )
 
 Rails.application.config.assets.precompile += %w(

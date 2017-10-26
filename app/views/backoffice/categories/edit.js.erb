@@ -1,0 +1,22 @@
+modal = $("<%= escape_javascript( render(partial: 'backoffice/categories/shared/edit', locals: { category: @category }) ) %>");
+$(modal).modal('show');
+$(modal).find('select.colorpicker').simplecolorpicker({picker: true, theme: 'fontawesome'});
+
+function changeParentsAvailable() {
+  $(modal).find("#category_parent_id > option").addClass('hidden');
+  var css_class = $(modal).find("#category_kind").find("option:selected").attr('class');
+  if ( !css_class == '' ) {
+    $(modal).find("#category_parent_id > ."+css_class).removeClass('hidden');
+  }
+  $(modal).find("#category_parent_id > option:first").removeClass('hidden');    
+}
+
+$(modal).find("#category_kind").change(function(){
+  changeParentsAvailable();
+  $(modal).find("#category_parent_id > option").removeAttr('selected');
+  $(modal).find("#category_parent_id > option:first").attr('selected', 'selected');
+});
+
+if ( $(modal).find("#category_kind").val() !== "" ) {
+  changeParentsAvailable();
+}

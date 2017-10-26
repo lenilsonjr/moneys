@@ -16,6 +16,7 @@
 //= require cocoon
 //= require sounds
 //= require cable
+//= require jquery.simplecolorpicker.js
 
 // Sobrescreve data-confirm do Rails
 $.rails.allowAction = function(element) {
@@ -97,7 +98,7 @@ $(document).on('cocoon:after-insert', function(e, insertedItem){
   $('.date-mask').mask('00/00/0000');
   $('.cep').mask('00000-000');
 
-});
+});  
 
 var SPMaskBehavior = function (val) {
   return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
@@ -118,3 +119,5 @@ $(document).on('change', '.radio-icon', function(e){
   $('.radio-icon-selected').attr('src', '/assets/banks/' + image);
 
 });
+
+$('select.colorpicker').simplecolorpicker({picker: true, theme: 'fontawesome'});

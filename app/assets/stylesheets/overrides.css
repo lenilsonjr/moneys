@@ -34,3 +34,19 @@
   font-weight: 300!important;
   text-transform: uppercase!important;
 }
+
+.simplecolorpicker span.color:hover, .simplecolorpicker span.color[data-selected], .simplecolorpicker span.color[data-selected]:hover {
+  border: 10px solid transparent!important;
+}
+
+.simplecolorpicker.icon, .simplecolorpicker span.color {
+  border: 10px solid transparent!important;
+}
+
+.input-addon-colors {
+  padding: 0px!important;
+}
+
+.input-addon-colors .simplecolorpicker.icon {
+  border-radius: 4px 0px 0px 4px!important;  
+}

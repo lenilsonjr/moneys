@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     get 'settings', to: 'settings#index'
 
     resources :accounts, except: [ :show ]
-
+    resources :categories, except: [ :show ]
+    
     resources :books, except: [ :show, :index ] do
       put 'alternate'      
     end

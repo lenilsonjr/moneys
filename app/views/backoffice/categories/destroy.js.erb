@@ -1,0 +1,6 @@
+<% if @category.destroyed? %>
+$('#category_<%= @category.id %>').remove();
+<% else %>
+<%= add_gritter("Não foi possível escolher a categoria!", :title => "Erro!", :image => '/assets/error.png') %>
+<% end %>
+$('.modal').modal('hide');

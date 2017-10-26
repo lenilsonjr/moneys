@@ -1,0 +1,5 @@
+<% js = escape_javascript(
+  render(partial: 'backoffice/categories/shared/categories', locals: { categories: @categories })
+) %>
+$("#filterrific_results").html("<%= js %>");
+$('.modal').modal('hide');

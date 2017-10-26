@@ -1,0 +1,29 @@
+#filterrific_results
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Nome
+        %th Tipo
+        %th
+        %th
+        %th
+
+    %tbody
+      - categories.each do |category|
+        %tr[category]{class: category.kind_color}
+          %td= category.name
+          %td= Category.match_kind(category.kind)
+          %td= link_to fa_icon('eye 2x', class: 'text-info', title: 'Ver'), [:backoffice, category]
+          %td= link_to fa_icon('edit 2x', class: 'text-warning', title: 'Editar'), edit_backoffice_category_path(category), remote: true
+          %td= link_to fa_icon('trash 2x', class: 'text-danger', title: 'Apagar'), [:backoffice, category], method: :delete, data: { confirm: 'Tem certeza?' }, remote: true
+        - category.children.each do |child|
+          %tr.small[child]{class: child.kind_color}
+            %td{:colspan => 2, style: "padding-left: 30px"}= child.name
+            %td= link_to fa_icon('eye 2x', class: 'text-info', title: 'Ver'), [:backoffice, child]
+            %td= link_to fa_icon('edit 2x', class: 'text-warning', title: 'Editar'), edit_backoffice_category_path(child), remote: true
+            %td= link_to fa_icon('trash 2x', class: 'text-danger', title: 'Apagar'), [:backoffice, child], method: :delete, data: { confirm: 'Tem certeza?' }, remote: true
+          
+
+  = paginate categories
+
+  = render partial: 'layouts/backoffice_shared/empty_message', locals: { collection: categories }  

@@ -14,23 +14,20 @@
         = link_to root_path do
           %i.fa.fa-dashboard
           %span Painel
-      %li
-        = link_to backoffice_accounts_path do
-          %i.fa.fa-university
-          %span Contas
       %li.dropdown
         %a.dropdown-toggle{"data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
-          UI Kits
+          Outros
           %b.fa.fa-angle-down
         %ul.dropdown-menu
           %li
-            %a{:href => "general.html"} General
+            = link_to backoffice_accounts_path do
+              %i.fa.fa-university
+              %span Contas
           %li
-            %a{:href => "buttons.html"} Buttons
-          %li
-            %a{:href => "typography.html"} Typography
-          %li
-            %a{:href => "font_awesome.html"} Font Awesome
+            = link_to backoffice_categories_path do
+              %i.fa.fa-tags
+              %span Categorias
+
   .top-nav.hr-top-nav
     %ul.nav.pull-right.top-menu
       %li

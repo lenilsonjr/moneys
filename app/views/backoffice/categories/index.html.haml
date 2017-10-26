@@ -1,0 +1,12 @@
+- content_for :header do
+  Listando categorias
+
+= render partial: 'backoffice/categories/shared/filter'
+
+= render(                                             |
+  partial: 'backoffice/categories/shared/categories', |
+  locals: { categories: @categories }                 |
+)                                                     |
+
+%br
+= link_to 'Nova Categoria', new_backoffice_category_path, class: 'btn btn-primary', remote: true
