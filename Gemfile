@@ -71,6 +71,8 @@ gem 'city-state', github: 'loureirorg/city-state'
 gem 'redis', '~> 3.2'
 #Colorized terminal outputs
 gem "colorize"
+#Flexible Ruby on Rails breadcrumbs plugin.
+gem "gretel"
 
 source 'https://rails-assets.org' do
   # Animated css

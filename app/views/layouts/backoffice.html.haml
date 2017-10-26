@@ -34,17 +34,7 @@
         %section.wrapper
           / page start
           = flash_messages
-          .row
-            .col-md-12
-              / breadcrumbs start
-              %ul.breadcrumb
-                %li
-                  %a{:href => "#"}
-                    %i.fa.fa-home
-                    Home
-                %li
-                  %a{:href => "#"} Dashboard
-                %li.active Current page
+          = render 'layouts/backoffice_shared/breadcrumb'
           - unless content_for(:header).blank?
             .row
               .col-sm-12

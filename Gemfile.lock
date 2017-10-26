@@ -127,6 +127,8 @@ GEM
       railties (>= 3.2, < 5.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    gretel (3.0.9)
+      rails (>= 3.1.0)
     gritter (1.2.0)
     groupdate (3.2.0)
       activesupport (>= 3)
@@ -340,6 +342,7 @@ DEPENDENCIES
   faker!
   filterrific
   font-awesome-rails
+  gretel
   gritter (= 1.2.0)
   groupdate
   haml-rails

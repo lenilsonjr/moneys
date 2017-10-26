@@ -1,0 +1,11 @@
+- breadcrumb :root
+- breadcrumbs(autoroot: true, display_single_fragment: true).tap do |links|
+  - if links.any?
+    .row
+      .col-md-12
+        %ul.breadcrumb
+          - links.each do |link|
+            %li{:class => link.current? ? "active" : nil}
+              = link_to link.url do
+                %i.fa.fa-home
+                = link.text
