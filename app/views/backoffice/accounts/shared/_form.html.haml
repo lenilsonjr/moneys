@@ -6,7 +6,7 @@
     .col-md-4
       = f.input :kind, placeholder: "Tipo", collection: Account.available_kinds
     .col-md-2
-      = f.input :currency, placeholder: "Moeda", collection: all_currencies(Money::Currency.table)
+      = f.input :currency, placeholder: "Moeda", collection: all_currencies(Money::Currency.table), selected: f.object.new_record? ? @current_book.main_currency : f.object.currency
     .col-md-2
       = f.input :logo do
         .btn-group
