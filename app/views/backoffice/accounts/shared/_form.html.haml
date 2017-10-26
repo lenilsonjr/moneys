@@ -13,7 +13,7 @@
           %ul#multicol-menu.nav.pull-right
             %li.dropdown
               %button.btn.btn-primary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
-                %img{:src => f.object.new_record? ? '/assets/banks/carteira.jpg' : "/assets/banks/#{f.object.logo}", :style => 'width: 20px;', class: 'radio-icon-selected'}
+                %img{:src => f.object.new_record? ? '/assets/accounts/carteira.jpg' : "/assets/accounts/#{f.object.logo}", :style => 'width: 20px;', class: 'radio-icon-selected'}
                 %b.caret
               %ul#icons.dropdown-menu.dropdown-menu-icons
                 //%li.dropdown-header.text-center Icone
@@ -21,7 +21,7 @@
                   %li.pick-icon.col-xs-3.text-center
                     %label
                       = f.radio_button :logo, icon, {style: 'display: none;', class: 'radio-icon', :checked => ( f.object.new_record? && icon == 'carteira.jpg' )}
-                      %img{:src => "/assets/banks/#{icon}", :style => 'width: 40px;'}
+                      %img{:src => "/assets/accounts/#{icon}", :style => 'width: 40px;'}
     .col-md-12
       = f.input :description, placeholder: "Descrição"
   .actions
