@@ -111,3 +111,10 @@ spOptions = {
 $('.cellphone').mask(SPMaskBehavior, spOptions);
 
 ClientSideValidations.formBuilders['NestedForm::SimpleBuilder'] = ClientSideValidations.formBuilders['SimpleForm::FormBuilder'];
+
+$(document).on('change', '.radio-icon', function(e){  
+
+  image = $(this).val();
+  $('.radio-icon-selected').attr('src', '/assets/banks/' + image);
+
+});

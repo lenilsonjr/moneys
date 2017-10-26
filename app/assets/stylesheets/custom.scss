@@ -27,3 +27,19 @@ canvas {
   //margin: 1px;
   border: 1px solid rgba(0, 0, 0, .2);  
 }
+
+.dropdown-menu-icons {
+  width: 240px!important;
+}
+
+.pick-icon {
+  margin-bottom: 5px;
+}
+
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}

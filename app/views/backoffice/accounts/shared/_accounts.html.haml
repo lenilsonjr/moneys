@@ -1,7 +1,7 @@
 .row
   .accounts-list
     - accounts.each do |account|
-      = render 'backoffice/accounts/shared/accounts', account: account
+      = render 'backoffice/accounts/shared/account', account: account
   .col-md-3
     = link_to new_backoffice_account_path, remote: true do
       .profile-nav.alt

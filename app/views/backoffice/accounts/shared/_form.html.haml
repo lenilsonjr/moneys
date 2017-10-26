@@ -1,15 +1,28 @@
-= simple_form_for [:backoffice, @account], remote: true do |f|
+= simple_form_for [:backoffice, @account], remote: true, defaults: { label: false } do |f|
   .noticess
   .row
     .col-md-4
-      = f.input :name, label: "Nome"
+      = f.input :name, placeholder: "Nome"
     .col-md-4
-      = f.input :kind, label: "Tipo", collection: Account.available_kinds
+      = f.input :kind, placeholder: "Tipo", collection: Account.available_kinds
     .col-md-2
-      = f.input :logo, label: "Logo"
+      = f.input :currency, placeholder: "Moeda", collection: all_currencies(Money::Currency.table)
     .col-md-2
-      = f.input :currency, label: "Moeda", collection: all_currencies(Money::Currency.table)
+      = f.input :logo do
+        .btn-group
+          %ul#multicol-menu.nav.pull-right
+            %li.dropdown
+              %button.btn.btn-primary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+                %img{:src => f.object.new_record? ? '/assets/banks/carteira.jpg' : "/assets/banks/#{f.object.logo}", :style => 'width: 20px;', class: 'radio-icon-selected'}
+                %b.caret
+              %ul#icons.dropdown-menu.dropdown-menu-icons
+                //%li.dropdown-header.text-center Icone
+                - bank_icons.each do |icon|
+                  %li.pick-icon.col-xs-3.text-center
+                    %label
+                      = f.radio_button :logo, icon, {style: 'display: none;', class: 'radio-icon'}
+                      %img{:src => "/assets/banks/#{icon}", :style => 'width: 40px;'}
     .col-md-12
-      = f.input :description, label: "Descrição"
+      = f.input :description, placeholder: "Descrição"
   .actions
     = f.submit class: 'btn btn-success'
