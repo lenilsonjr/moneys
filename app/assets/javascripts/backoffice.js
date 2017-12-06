@@ -116,7 +116,7 @@ ClientSideValidations.formBuilders['NestedForm::SimpleBuilder'] = ClientSideVali
 $(document).on('change', '.radio-icon', function(e){  
 
   image = $(this).val();
-  $('.radio-icon-selected').attr('src', '/assets/banks/' + image);
+  $('.radio-icon-selected').attr('src', '/assets/accounts/' + image);
 
 });
 
