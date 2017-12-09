@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024165143) do
+ActiveRecord::Schema.define(version: 20171209210446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,29 @@ ActiveRecord::Schema.define(version: 20171024165143) do
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.string "description"
+    t.string "kind"
+    t.date "date"
+    t.date "due_at"
+    t.string "amount_cents"
+    t.string "currency"
+    t.bigint "parent_transaction_id"
+    t.string "recurrence_type"
+    t.integer "installment"
+    t.string "account_type"
+    t.bigint "account_id"
+    t.string "target_account_type"
+    t.bigint "target_account_id"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_type", "account_id"], name: "index_transactions_on_account_type_and_account_id"
+    t.index ["category_id"], name: "index_transactions_on_category_id"
+    t.index ["parent_transaction_id"], name: "index_transactions_on_parent_transaction_id"
+    t.index ["target_account_type", "target_account_id"], name: "index_transactions_on_target_account_type_and_target_account_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -92,4 +115,5 @@ ActiveRecord::Schema.define(version: 20171024165143) do
   add_foreign_key "accounts", "books"
   add_foreign_key "books", "users"
   add_foreign_key "categories", "books"
+  add_foreign_key "transactions", "categories"
 end

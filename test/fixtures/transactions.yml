@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  kind: MyString
+  date: 2017-12-09
+  due_at: 2017-12-09
+  amount_cents: MyString
+  currency: MyString
+  parent_transaction: 1
+  recurrence_type: MyString
+  installment: 1
+  account: one
+  target_account: one
+  category: one
+
+two:
+  description: MyString
+  kind: MyString
+  date: 2017-12-09
+  due_at: 2017-12-09
+  amount_cents: MyString
+  currency: MyString
+  parent_transaction: 1
+  recurrence_type: MyString
+  installment: 1
+  account: two
+  target_account: two
+  category: two
