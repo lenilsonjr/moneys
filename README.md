@@ -1,6 +1,6 @@
 # Moneys
 
-:construction: BE AWARE: Moneys is still on development, things may be unstable. Contributtions are appreciated. :construction:
+:construction: BE AWARE: Moneys is still on development, things may be unstable. Contributions are appreciated. :construction:
 
 ## Installing
 ```
