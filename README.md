@@ -1,24 +1,14 @@
-# README
+# Moneys
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+:construction: BE AWARE: Moneys is still on development, things may be unstable. Contributtions are appreciated. :construction:
 
-Things you may want to cover:
+## Installing
+```
+git clone git@github.com:lenilsonjr/moneys.git
+cd moneys
+bundle install
+```
+After that, copy config/database-example.yml, rename it database.yml and setup your database access. This version uses PostgreSQL.
+Then you can run `rake dev:setup`.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Have fun!
